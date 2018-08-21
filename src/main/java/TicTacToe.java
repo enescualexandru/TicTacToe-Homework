@@ -52,7 +52,12 @@ public class TicTacToe {
                 }
             } else {
                 System.out.println("Draw match !");
-                flag = askUserForMore();
+                if (askUserForMore()) {
+                    flag = false;
+                    initGame();
+                } else {
+                    flag = false;
+                }
             }
         }
 
